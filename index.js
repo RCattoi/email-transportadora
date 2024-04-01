@@ -5,7 +5,8 @@ require('dotenv').config();
 
 const PORT = 3000;
 app.use(express.json());
-app.use(cors());
+const corsOptions = { origin: 'https://rcattoi.github.io/test-email/' };
+app.use(cors(corsOptions));
 
 app.listen(PORT, () => {
   console.log(`It's alive at: ${PORT}`);
