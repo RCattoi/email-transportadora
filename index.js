@@ -5,7 +5,8 @@ require('dotenv').config();
 
 const PORT = 3000;
 app.use(express.json());
-const corsOptions = { origin: 'https://rcattoi.github.io/test-email/' };
+
+const corsOptions = { origin: true };
 app.use(cors(corsOptions));
 
 app.listen(PORT, () => {
