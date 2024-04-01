@@ -1,12 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const emailjs = require('emailjs-com');
 require('dotenv').config();
 
 const PORT = 3000;
 app.use(express.json());
 
-const corsOptions = { origin: true };
+const corsOptions = {
+  origin: 'https://rcattoi.github.io/test-email/',
+};
 app.use(cors(corsOptions));
 
 app.listen(PORT, () => {
