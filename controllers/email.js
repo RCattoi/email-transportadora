@@ -5,7 +5,7 @@ require('dotenv').config();
 exports.sendEmail = async (req, res) => {
   try {
     const { email, message } = req.body;
-    console.log(email, message);
+
     if (!email) {
       return res.status(400).json({ message: 'Email is required.' });
     }
