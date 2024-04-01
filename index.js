@@ -14,7 +14,7 @@ app.listen(PORT, () => {
 });
 
 app.post('/api/data', (req, res) => {
-  const { to, subject, name, message, reply_to } = req.body.data;
+  const { to, subject, name, message, reply_to } = req.body;
 
   const USERID = process.env.USERID;
   emailjs.init(USERID);
