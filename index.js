@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(
   cors({
     // origin: '*',
-    origin: ['https://transportadora-beta.onrender.com/'],
+    origin: ['https://transportadora-beta.onrender.com'],
   })
 );
 
