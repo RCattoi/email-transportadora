@@ -4,16 +4,24 @@ require('dotenv').config();
 
 exports.sendEmail = async (req, res) => {
   try {
-    const { email, message } = req.body;
-
-    if (!email) {
-      return res.status(400).json({ message: 'Email is required.' });
+    const { email, message, name, phone } = req.body;
+    switch (true) {
+      case !email:
+        return res.status(400).json({ message: 'Email is required.' });
+      case !message:
+        return res.status(400).json({ message: 'Message is required.' });
+      case !name:
+        return res.status(400).json({ message: 'Name is required.' });
+      case !phone:
+        return res.status(400).json({ message: 'Phone is required.' });
+      default:
+        break;
     }
 
     const options = {
-      to: email,
-      subject: 'Test',
-      message: message,
+      to: 'rodrigoccattoi@gmail.com',
+      subject: 'Você recebeu uma mensagem de atraves do site da Transvila',
+      message: `Nome:${name} - telefone${phone} \n responder para:${email}\n ${message}`,
     };
 
     await sendEmail(options);

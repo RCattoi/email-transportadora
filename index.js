@@ -10,8 +10,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: '*',
-    // origin: ['http://localhost:3000,https://rcattoi.github.io/test-email'],
+    origin: ['http://localhost:3000,https://transportadora-beta.onrender.com'],
   })
 );
 
