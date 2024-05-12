@@ -10,8 +10,8 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: '*',
-    // origin: ['http://localhost:3000,https://transportadora-beta.onrender.com'],
+    // origin: '*',
+    origin: ['https://transportadora-beta.onrender.com/'],
   })
 );
 
