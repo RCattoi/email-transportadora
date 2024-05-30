@@ -19,7 +19,7 @@ exports.sendEmail = async (req, res) => {
     }
 
     const options = {
-      to: 'rodrigoccattoi@gmail.com',
+      to: 'transvilatransportes@gmail.com',
       subject: 'Você recebeu uma mensagem de atraves do site da Transvila',
       message: `<div>Nome: ${name} - telefone: ${phone}</div>
       <div>responder para: ${email}</div>
